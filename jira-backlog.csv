@@ -1,0 +1,62 @@
+Issue Id,Issue Type,Summary,Description,Assignee,Parent,Labels
+1,Epic,Phase 1 - Repo Audit & Requirements,Repo setup SRS wireframes ER and API drafts,Bahar Shahriyar,,phase-1
+2,Epic,Phase 2 - Foundation API & Database,Skeleton end to end with CI,Bahar Shahriyar,,phase-2
+3,Epic,Phase 3 - Identity & User Profiles,Auth roles profiles,Safyal Muznabin Ratul,,phase-3
+4,Epic,Phase 4 - Social Networking,Feed votes comments media moderation,Sumaiya Sadika,,phase-4
+5,Epic,Phase 5 - Messaging & Notifications,Chat and notifications over WebSocket,Urbashi Biswas,,phase-5
+6,Epic,Phase 6 - Blood Coordination,Blood request to donation workflow,Urbashi Biswas,,phase-6
+7,Epic,Phase 7 - Humanitarian Verification & Impact Ledger,Evidence review and one-time points,Safyal Muznabin Ratul,,phase-7
+8,Epic,Phase 8 - Health Intelligence MVP,Dengue data map and trends,Sadek Hossain Rifat,,phase-8
+9,Epic,Phase 9 - Campaigns & Community Reports,Campaigns hazard reports admin dashboard,Sumaiya Sadika,,phase-9
+10,Epic,Phase 10 - Testing Security & Deployment,Test evidence hardening live deploy,Bahar Shahriyar,,phase-10
+11,Story,Create GitHub repo branch rules PR template,Protect main; PR template; invite members,Bahar Shahriyar,1,devops
+12,Story,Write SRS with user stories and acceptance criteria,docs/srs.md covering six roles and all modules,Bahar Shahriyar,1,docs;model-opus
+13,Story,UI/UX wireframes and design system - social screens,Figma or sketches: auth feed profile; colour/type tokens,Sumaiya Sadika,1,design;model-opus
+14,Story,UI/UX wireframes - blood map dashboard screens,Blood request donor list map health dashboard admin,Urbashi Biswas,1,design;model-opus
+15,Story,Draft OpenAPI contract,docs/api-contract.yaml for all modules,Safyal Muznabin Ratul,1,backend;model-opus
+16,Story,Draft ER diagram,db/er-diagram with keys and relations,Sadek Hossain Rifat,1,database;model-opus
+17,Story,Scaffold React + Vite app with routing layout and API client,Base layout; env config; axios client,Sumaiya Sadika,2,frontend;model-sonnet
+18,Story,Scaffold FastAPI app with config and error handling,Modular folders; /health; CORS; settings,Safyal Muznabin Ratul,2,backend;model-sonnet
+19,Story,MySQL schema v1 with Alembic migrations and seeds,Core tables; migration workflow,Sadek Hossain Rifat,2,database;model-sonnet
+20,Story,Docker Compose for local MySQL + API,One command local dev,Bahar Shahriyar,2,devops;model-sonnet
+21,Story,GitHub Actions CI lint and tests,Run on every PR,Bahar Shahriyar,2,devops;model-sonnet
+22,Story,Users roles and profiles tables,Six roles; profile fields; privacy flags,Sadek Hossain Rifat,3,database
+23,Story,Auth API: register login JWT password hashing,Secure hashing; token refresh,Safyal Muznabin Ratul,3,backend
+24,Story,Role-based authorization dependency,Guest user requester donor moderator admin,Safyal Muznabin Ratul,3,backend
+25,Story,Login register and profile pages,Forms with validation and error states,Sumaiya Sadika,3,frontend
+26,Story,Postman collection - auth,Requests with tests; environments,Bahar Shahriyar,3,testing
+27,Story,Posts comments votes reports tables with indexes,Nested replies; unique vote per user,Sadek Hossain Rifat,4,database
+28,Story,Post comment vote and report APIs,CRUD; pagination; ownership checks,Safyal Muznabin Ratul,4,backend
+29,Story,Media upload endpoint with file validation,Type and size limits; storage abstraction,Safyal Muznabin Ratul,4,backend
+30,Story,Feed post composer and comments UI,Text image video posts; vote buttons,Sumaiya Sadika,4,frontend
+31,Story,Report content flow in UI,Report dialog; status feedback,Sumaiya Sadika,4,frontend
+32,Story,Moderation queue UI,Review reported content; approve or remove,Urbashi Biswas,4,frontend
+33,Story,Messages and notifications tables,Conversations; read state,Sadek Hossain Rifat,5,database
+34,Story,WebSocket chat and notification service,Authenticated sockets; REST fallback,Safyal Muznabin Ratul,5,backend
+35,Story,Chat UI and notification bell,Real-time updates; unread counts,Urbashi Biswas,5,frontend
+36,Story,Blood requests responses and status history tables,Audit trail of status changes,Sadek Hossain Rifat,6,database
+37,Story,Blood request API with status state machine,Open Matched In Progress Completed Cancelled,Safyal Muznabin Ratul,6,backend;model-opus
+38,Story,Donor discovery API with group location availability filters,Eligible donors only; consent-aware,Safyal Muznabin Ratul,6,backend
+39,Story,Geocoding via Nominatim with DB cache,External API integration; respect rate limit,Safyal Muznabin Ratul,6,backend
+40,Story,Blood request form donor list and response screens,Urgency badges; responses review,Urbashi Biswas,6,frontend
+41,Story,Leaflet map for requests with consent-based location,Approximate public location; expiry,Urbashi Biswas,6,frontend
+42,Story,Activities evidence and impact ledger tables,Unique award constraint; immutable ledger,Sadek Hossain Rifat,7,database;model-opus
+43,Story,Activity submission and verification APIs,Idempotent point award after verification,Safyal Muznabin Ratul,7,backend;model-opus
+44,Story,Submit activity UI and impact score profile section,Evidence upload; score history,Sumaiya Sadika,7,frontend
+45,Story,Verifier review UI,Approve reject request changes,Urbashi Biswas,7,frontend
+46,Story,Disease observations tables and import script with seeds,Dengue sample data with source and date,Sadek Hossain Rifat,8,database
+47,Story,Health data import validation and aggregation API,Admin-validated; geographic aggregation,Safyal Muznabin Ratul,8,backend
+48,Story,Open-Meteo weather integration for heat index,External API; cache responses,Safyal Muznabin Ratul,8,backend
+49,Story,Health heatmap and trend charts,Leaflet heatmap; chart with disclaimers,Urbashi Biswas,8,frontend
+50,Story,Campaigns and community reports tables,Report categories; moderation status,Sadek Hossain Rifat,9,database
+51,Story,Campaign and community report APIs,CRUD; admin approval,Safyal Muznabin Ratul,9,backend
+52,Story,Campaign pages and report form UI,Dengue heatstroke hygiene campaigns,Sumaiya Sadika,9,frontend
+53,Story,Admin dashboard,Users content imports reports overview,Urbashi Biswas,9,frontend
+54,Story,Backend unit and integration tests with pytest,Auth blood ledger coverage,Safyal Muznabin Ratul,10,testing;model-sonnet
+55,Story,Frontend component tests with Vitest,Forms feed key components,Sumaiya Sadika,10,testing;model-sonnet
+56,Story,Selenium end-to-end tests for core journeys,Register post blood request verify,Bahar Shahriyar,10,testing;model-sonnet
+57,Story,Full Postman collection and Newman run in CI,All modules with assertions,Bahar Shahriyar,10,testing
+58,Story,Security hardening: rate limits validation CORS headers,Sensitive endpoints; upload checks,Safyal Muznabin Ratul,10,backend
+59,Story,DB index review seed data and backup script,Query plans for feed and donor search,Sadek Hossain Rifat,10,database
+60,Story,Deploy frontend to Vercel backend to Render and DB to free MySQL,Env vars; CORS; smoke test,Bahar Shahriyar,10,devops
+61,Story,Test report contributions notes and demo script,docs/test-report.md docs/contributions.md,Bahar Shahriyar,10,docs
